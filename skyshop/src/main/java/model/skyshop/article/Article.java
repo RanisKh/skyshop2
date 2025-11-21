@@ -1,6 +1,6 @@
-package org.skypro.skyshop.article;
+package model.skyshop.article;
 
-import org.skypro.skyshop.search.Searchable;
+import model.skyshop.search.Searchable;
 
 import java.util.Objects;
 import java.util.UUID;
@@ -56,13 +56,11 @@ public final class Article implements Searchable {
     }
 
     @Override
-    @JsonIgnore
     public String getSearchTerm() {
         return toString();
     }
 
     @Override
-    @JsonIgnore
     public String getContentType() {
         return "ARTICLE";
     }

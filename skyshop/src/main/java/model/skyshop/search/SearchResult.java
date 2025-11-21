@@ -1,4 +1,4 @@
-package org.skypro.skyshop.search;
+package model.skyshop.search;
 
 import java.util.Objects;
 
@@ -7,7 +7,7 @@ public final class SearchResult {
     private final String name;
     private  final  String content;
 
-    public SearchResult(String id, String name, String content) {
+    private SearchResult(String id, String name, String content) {
         this.id = Objects.requireNonNull(id, "ID не может быть null");
         this.name = Objects.requireNonNull(name, "Name не может быть null");
         this.content = Objects.requireNonNull(content, "Content не может быть null");

@@ -1,4 +1,4 @@
-package org.skypro.skyshop.product;
+package model.skyshop.product;
 
 import java.util.Objects;
 import java.util.UUID;
@@ -31,13 +31,7 @@ public class SimpleProduct extends Product {
 
     @Override
     public String toString() {
-        return "Продукт: " + name + "стоимость " + price;
-    }
-
-
-    @Override
-    public String getStringRepresentation() {
-        return super.getStringRepresentation();
+        return "Продукт: " + getName() + "стоимость " + price;
     }
 
     @Override

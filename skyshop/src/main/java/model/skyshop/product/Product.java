@@ -1,12 +1,12 @@
-package org.skypro.skyshop.product;
-import org.skypro.skyshop.search.Searchable;
+package model.skyshop.product;
+import model.skyshop.search.Searchable;
 import java.util.Objects;
 import java.util.UUID;
 
 public abstract class Product implements Searchable {
-    String name;
+    private String name;
     private final UUID id;
-    double price;
+    private double price;
 
     public Product(UUID id, String name, double price) {
         this.id = Objects.requireNonNull(id, "ID не может быть null");

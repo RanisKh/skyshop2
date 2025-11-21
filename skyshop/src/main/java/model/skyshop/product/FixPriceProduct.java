@@ -1,13 +1,12 @@
-package org.skypro.skyshop.product;
+package model.skyshop.product;
 
 import java.util.UUID;
 
 public class FixPriceProduct extends Product {
-    private final double fixPrice;
+    private static final double fixPrice = 99;
 
     public FixPriceProduct(UUID id, String name, double fixPrice) {
         super(id, name, fixPrice);
-        this.fixPrice = fixPrice;
     }
 
     public static FixPriceProduct createFromProduct(Product product) {
@@ -33,14 +32,8 @@ public class FixPriceProduct extends Product {
     @Override
     public String toString() {
         return "Продукция с фиксированной ценой" +
-                "name='" + name + '\'' +
+                "name='" + getName() + '\'' +
                 fixPrice;
-    }
-
-
-    @Override
-    public String getStringRepresentation() {
-        return super.getStringRepresentation();
     }
 }
 

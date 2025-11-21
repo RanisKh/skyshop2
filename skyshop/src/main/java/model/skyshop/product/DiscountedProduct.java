@@ -1,4 +1,4 @@
-package org.skypro.skyshop.product;
+package model.skyshop.product;
 
 import java.util.Objects;
 import java.util.UUID;
@@ -50,7 +50,7 @@ public class DiscountedProduct extends Product {
 
     @Override
     public String toString() {
-        return "Скидочный продут: " + name + ", стоимость=" + basePrice +
+        return "Скидочный продут: " + getName() + ", стоимость=" + basePrice +
                 "скидка" + discountInPercentages;
     }
 
@@ -66,8 +66,4 @@ public class DiscountedProduct extends Product {
         return Objects.hash(basePrice, discountInPercentages);
     }
 
-    @Override
-    public String getStringRepresentation() {
-        return super.getStringRepresentation();
-    }
 }

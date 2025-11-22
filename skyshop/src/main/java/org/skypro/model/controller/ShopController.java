@@ -1,9 +1,9 @@
-package model.skyshop.controller;
+package org.skypro.model.controller;
 
 
-import model.skyshop.article.Article;
-import model.skyshop.product.Product;
-import model.skyshop.service.StorageService;
+import org.skypro.model.article.Article;
+import org.skypro.model.product.Product;
+import org.skypro.model.service.StorageService;
 
 import java.util.Collection;
 

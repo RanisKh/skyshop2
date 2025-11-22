@@ -1,5 +1,5 @@
-package model.skyshop.product;
-import model.skyshop.search.Searchable;
+package org.skypro.model.product;
+import org.skypro.model.search.Searchable;
 import java.util.Objects;
 import java.util.UUID;
 
@@ -36,7 +36,6 @@ public abstract class Product implements Searchable {
         return true;
     }
 
-    @JsonIgnore
     public String getSearchTerm() {
         return name;
     }
@@ -44,7 +43,6 @@ public abstract class Product implements Searchable {
 
 
     @Override
-    @JsonIgnore
     public String getContentType() {
         return "PRODUCT";
     }

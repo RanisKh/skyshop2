@@ -1,4 +1,4 @@
-package model.skyshop.search;
+package org.skypro.model.search;
 
 import java.util.Objects;
 

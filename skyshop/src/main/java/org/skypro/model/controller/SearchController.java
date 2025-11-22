@@ -1,8 +1,8 @@
-package model.skyshop.controller;
+package org.skypro.model.controller;
 
 
-import model.skyshop.search.SearchResult;
-import model.skyshop.service.SearchService;
+import org.skypro.model.search.SearchResult;
+import org.skypro.model.service.SearchService;
 
 import java.util.List;
 

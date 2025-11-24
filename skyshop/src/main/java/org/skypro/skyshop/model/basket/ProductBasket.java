@@ -1,4 +1,4 @@
-package org.skypro.model.basket;
+package org.skypro.skyshop.model.basket;
 
 import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Component;

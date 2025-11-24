@@ -1,9 +1,10 @@
-package org.skypro.model.service;
+package org.skypro.skyshop.service;
 
-import org.skypro.model.basket.BasketItem;
-import org.skypro.model.basket.ProductBasket;
-import org.skypro.model.basket.UserBasket;
-import org.skypro.model.product.Product;
+import org.skypro.skyshop.exceptions.NoSuchProductException;
+import org.skypro.skyshop.model.basket.BasketItem;
+import org.skypro.skyshop.model.basket.ProductBasket;
+import org.skypro.skyshop.model.basket.UserBasket;
+import org.skypro.skyshop.model.product.Product;
 import org.springframework.stereotype.Service;
 
 import java.util.Optional;
@@ -24,7 +25,7 @@ public class BasketService {
         Optional<Product> product = storageService.getProductById(id);
 
         if (product.isEmpty()){
-            throw new IllegalArgumentException("Товар с ID " + id + " не найден")
+            throw new NoSuchProductException("Товар с ID " + id + " не найден");
         }
         basket.addProduct(id);
     }

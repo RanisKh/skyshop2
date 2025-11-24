@@ -1,4 +1,4 @@
-package org.skypro.model.basket;
+package org.skypro.skyshop.model.basket;
 
 import java.math.BigDecimal;
 import java.util.List;

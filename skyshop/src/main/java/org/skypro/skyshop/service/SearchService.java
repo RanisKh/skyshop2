@@ -1,7 +1,7 @@
-package org.skypro.model.service;
+package org.skypro.skyshop.service;
 
-import org.skypro.model.search.SearchResult;
-import org.skypro.model.search.Searchable;
+import org.skypro.skyshop.search.SearchResult;
+import org.skypro.skyshop.search.Searchable;
 import org.springframework.stereotype.Service;
 
 import java.util.*;

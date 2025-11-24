@@ -1,7 +1,7 @@
-package org.skypro.model.controller;
+package org.skypro.skyshop.controller;
 
-import org.skypro.model.basket.UserBasket;
-import org.skypro.model.service.BasketService;
+import org.skypro.skyshop.model.basket.UserBasket;
+import org.skypro.skyshop.service.BasketService;
 
 import java.util.UUID;
 

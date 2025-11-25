@@ -1,19 +1,21 @@
 package org.skypro.skyshop.controller;
 
-
-
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.ExceptionHandler;
+import org.springframework.web.bind.annotation.ControllerAdvice;
 import org.skypro.skyshop.exceptions.NoSuchProductException;
 import org.skypro.skyshop.exceptions.ShopError;
 
 @ControllerAdvice
 public class ShopControllerAdvice {
 
-    @ExeptionHandler(NoSuchProductException.class)
-    public responseEntity<ShopError> handleNoSuchProductException(NoSuchProductException ex) {
+    @ExceptionHandler(NoSuchProductException.class)
+    public ResponseEntity<ShopError> handleNoSuchProductException(NoSuchProductException ex) {
         ShopError error = new ShopError(
                 "PRODUCT_NOT_FOUND",
-                ex.getMessage()
+                "Запрашиваемый товар не найден в системе"
         );
-    return new responseEntity<>(error,HttpStatus.NOT_FOUND);
+        return new ResponseEntity<>(error, HttpStatus.NOT_FOUND);
     }
 }

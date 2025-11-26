@@ -8,8 +8,13 @@ public record UserBasket (
     BigDecimal total
 ){
     public UserBasket (List<BasketItem> items){
-        this.items = items;
-        this.total = items.stream().map(item -> item.product().getPrice()
-                .multiply(BigDecimal.valueOf(item.quantity()))).reduce(BigDecimal.ZERO, BigDecimal::add);
+        this(items, calculateTotal(items));
     }
+
+    private static BigDecimal calculateTotal(List<BasketItem> items) {
+        return items.stream()
+                .map(item -> item.product().getPrice()
+                        .multiply(BigDecimal.valueOf(item.quantity())))
+                .reduce(BigDecimal.ZERO, BigDecimal::add);
+}
 }
